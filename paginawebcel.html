@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Grupo MEJ Contaduría</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+<style>
+  :root {
+    --green-primary: #2E7D32;
+    --green-light: #A5D6A7;
+    --green-hover: #1B5E20;
+    --gray-dark: #2D2D2D;
+    --gray-medium: #555555;
+    --gray-light: #F5F5F5;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  header {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-family: var(--font-heading);
+  }
+
+  .hero {
+    background: var(--green-light) url('hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--green-primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    text-decoration: none;
+    border: none;
+    transition: background 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: var(--green-hover);
+  }
+
+  .intro {
+    background: #ffffff;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .intro .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro h2 {
+    font-family: var(--font-heading);
+    color: var(--green-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro p {
+    font-family: var(--font-body);
+    color: var(--gray-medium);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .mensaje-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+  }
+
+  .mensaje-container > div,
+  .mensaje-container form {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .mensaje-container h2 {
+    font-family: var(--font-heading);
+    color: var(--green-primary);
+    margin-bottom: 1rem;
+  }
+
+  .mensaje-container p {
+    font-family: var(--font-body);
+    color: var(--gray-medium);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .mensaje-container label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+  }
+
+  .mensaje-container input,
+  .mensaje-container textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .services {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .service-card h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+    color: var(--green-primary);
+  }
+
+  .service-card p {
+    color: var(--gray-medium);
+    margin-bottom: 1rem;
+  }
+
+  .service-card .price {
+    font-weight: 600;
+  }
+
+  footer {
+    background: var(--gray-dark);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  footer a {
+    color: var(--green-light);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 .5rem;
+  }
+
+  @media (max-width: 600px) {
+    .mensaje-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    header,
+    nav,
+    .hero,
+    .intro,
+    .services,
+    footer {
+      text-align: center;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+
+  <header>
+    <img src="img/grupo MEJ.png" alt="Grupo MEJ Contaduría" width="150">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1>Más que contadores, somos tus aliados.</h1>
+    <a href="#servicios" class="btn-primary">Conoce nuestros servicios</a>
+  </section>
+<!-- SECCIÓN INICIO -->
+<section class="intro" id="inicio">
+  <div class="container">
+    <h2>Bienvenido a Grupo MEJ Contaduría</h2>
+    <p>
+      Nuestra oficina busca que usted, como nuestro cliente, se sienta confiado
+      al dejarnos a cargo de sus cuentas, para facilitarle su trabajo.
+    </p>
+  </div>
+</section>
+
+  <div class="mensaje-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    
+  <section class="services" id="servicios">
+  <div class="service-card">
+    <h3>Contabilidad mensual</h3>
+    <p>Registro de ingresos, egresos, conciliaciones y libros contables.</p>
+  </div>
+  <div class="service-card">
+    <h3>Declaración de IVA (mensual)</h3>
+    <p>Presentación de formulario SAT-2237.</p>
+  </div>
+  <div class="service-card">
+    <h3>Declaración ISR Trimestral</h3>
+    <p>Para personas individuales u obligadas.</p>
+  </div>
+  <div class="service-card">
+    <h3>Declaración ISR Anual</h3>
+    <p>Cierre anual contable y declaración completa.</p>
+  </div>
+  <div class="service-card">
+    <h3>Planilla de IGSS y cálculos laborales</h3>
+    <p>Elaboración mensual de planilla, salarios, vacaciones, aguinaldo, etc.</p>
+  </div>
+  <div class="service-card">
+    <h3>Inscripción y actualización en RTU (SAT)</h3>
+    <p>Trámite ante SAT para NIT, establecimiento, actividades económicas.</p>
+  </div>
+  <div class="service-card">
+    <h3>Constitución de empresa (sociedad o individual)</h3>
+    <p>Asesoría y trámite con SAT, notario y Registro Mercantil.</p>
+  </div>
+  <div class="service-card">
+    <h3>Asesoría fiscal personalizada</h3>
+    <p>Consultas legales, auditorías preventivas, planificación tributaria.</p>
+  </div>
+  <div class="service-card">
+    <h3>Elaboración de facturas electrónicas (FEL)</h3>
+    <p>Configuración en la SAT y proveedores autorizados.</p>
+  </div>
+  <div class="service-card">
+    <h3>Auditoría interna básica</h3>
+    <p>Revisión de procesos contables y recomendaciones.</p>
+  </div>
+  <div class="service-card">
+    <h3>Elaboración de estados financieros</h3>
+    <p>Balance general, estado de resultados, flujo de efectivo.</p>
+  </div>
+  <div class="service-card">
+    <h3>Trámites ante SAT en línea o presencial</h3>
+    <p>Presentación de formularios, gestiones de omisos, solvencias, etc.</p>
+  </div>
+</section>
+
+
+  <!-- Texto informativo -->
+    <div style="flex: 1; min-width: 250px;">
+      <h2 style="font-family: var(--font-heading); color: var(--green-primary); margin-bottom: 1rem;">
+        ¿Tienes preguntas?
+      </h2>
+      <p style="font-family: var(--font-body); color: var(--gray-medium); font-size: 1rem; line-height: 1.6;">
+        Puedes enviarnos un mensaje directo y nos pondremos en contacto contigo lo antes posible.
+      </p>
+    </div>
+
+    <section id="mensaje">
+  <!-- Contenido del formulario aquí -->
+</section>
+
+    <form action="https://formspree.io/f/mzzvjerj" method="POST" style="flex: 1; min-width: 300px;">
+      <label>Nombre</label>
+      <input type="text" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
+
+      <label>Correo electrónico</label>
+      <input type="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
+
+      <label>Mensaje</label>
+      <textarea name="message" rows="5" required style="width: 100%; padding: 0.5rem; margin-bottom: 1.5rem;"></textarea>
+
+      <button type="submit" class="btn-primary">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+  <footer id="contacto">
+    <p>Email: mejgrupo4@gmail.com</p>
+    <p>
+      <a href="https://facebook.com/GrupoMEJ">Facebook</a> •
+      <a href="https://instagram.com/contaduriamej">Instagram</a>
+
+    <div class="qr-container">
+  <h3>Acceso rápido</h3>
+  <p>Escanea el código QR para visitar nuestro sitio web:</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://asesoresmej.com&size=180x180" alt="QR Grupo MEJ">
+</div>
+
+
+    </p>
+  </footer>
+
+</body>
+</html>
